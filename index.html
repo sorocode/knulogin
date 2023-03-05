@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경북대학교</title>
+    <style>
+        #login {
+            text-align: center;
+        }
+        #login input{
+            margin-bottom: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">경북대학교</h1>
+    <h2 style="text-align: center;">로그인</h2>
+    <div id="login">
+        <input type="text" id="inputID" title="아이디를 입력하세요"><br>
+        <input type="text" id="inputPW" title="비밀번호를 입력하세요"><br>
+        <button id="btnlogin" onclick="if(document.querySelector('#inputID').value==='리리'&&document.querySelector('#inputPW').value==='0502'){alert('로그인성공');
+        window.location.href = 'http://www.kbu.ac.kr/kor/Main.do';
+
+        }else{alert('아이디와 비밀번호를 확인해주세요.')}">로그인</button>
+        <div><p>비밀번호를 잊으셨나요? <span><button onclick="alert('힌트'+'\n'+'아이디-??와 판다'+'\n'+'비밀번호-민이생일4자리')">여기를 클릭하세요</button></span></p></div>
+    </div>
+   <script>
+    document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        if(document.querySelector('#inputID').value==='리리'&&document.querySelector('#inputPW').value==='0502'){alert('로그인성공');
+        window.location.href = 'http://www.kbu.ac.kr/kor/Main.do';
+
+        }else{alert('아이디와 비밀번호를 확인해주세요.')}
+    }})
+   </script>
+</body>
+</html>
